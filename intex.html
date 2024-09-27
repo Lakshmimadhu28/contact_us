@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="contactForm">
+            <h2>Contact Us</h2>
+            
+            <!-- Name Fields -->
+            <div class="form-name">
+                <div class="input-box">
+                    <label for="firstName">First Name <span>*</span></label>
+                    <input type="text" id="firstName" placeholder="First Name">
+                    <span class="error-message"></span> <!-- Error message -->
+                </div>
+                <div class="input-box">
+                    <label for="lastName">Last Name <span>*</span></label>
+                    <input type="text" id="lastName" placeholder="Last Name">
+                    <span class="error-message"></span> <!-- Error message -->
+                </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-email">
+                <label for="email">Email Address <span>*</span></label>
+                <input type="email" id="email" placeholder="Email Address">
+                <span class="error-message"></span> <!-- Error message -->
+            </div>
+
+            <!-- Query Type -->
+            <div class="form-group">
+                <label>Query Type <span>*</span></label>
+                <div class="query-type">
+                    <label class="query-option">
+                        <input type="radio" name="queryType" value="General Enquiry"> General Enquiry
+                    </label>
+                    <label class="query-option">
+                        <input type="radio" name="queryType" value="Support Request"> Support Request
+                    </label>
+                </div>
+                <span class="error-message queryType-error"></span> <!-- Error message -->
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-message">
+                <label for="message">Message <span>*</span></label>
+                <textarea id="message" rows="4" placeholder="Message"></textarea>
+                <span class="error-message"></span> <!-- Error message -->
+            </div>
+
+            <!-- Consent Checkbox -->
+            <div class="form-conset">
+                <label>
+                    <input type="checkbox" name="consent" id="consent"> I consent to being contacted <span>*</span>
+                </label>
+                <span class="error-message"></span> <!-- Error message -->
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-submit">
+                <button type="submit" id="submitBtn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Data Display Container -->
+    <div class="data-display-container">
+        <h2>Submitted Data</h2>
+        <div id="dataDisplay"></div> <!-- Data will be displayed here -->
+    </div>
+
+    <!-- JavaScript -->
+    <script src="contact.js"></script>
+</body>
+</html>
